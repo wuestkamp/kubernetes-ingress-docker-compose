@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  ingress:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  frontend:
+    image: nginx:1.16
+    ports:
+      - "81:80"
+    environment:
+      - VIRTUAL_HOST=test.com
+
+  api:
+    image: nginx:1.16
+    ports:
+      - "82:80"
+    environment:
+      - VIRTUAL_HOST=api.test.com
