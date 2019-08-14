@@ -19,7 +19,7 @@ kubectl get svc --namespace=ingress-nginx
 # part 2
 checkout branch part2
 
-This part belong to this article: COMING
+This part belong to this article: https://medium.com/@wuestkamp/2-tls-replicate-kubernetes-ingress-locally-with-docker-compose-309e80afc6eb
 
 we extend part 1 to implement https for both Kubernetes Ingress and Docker Compose Ingress
 
